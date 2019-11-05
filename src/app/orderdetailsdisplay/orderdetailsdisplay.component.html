@@ -1,0 +1,61 @@
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search Record Here">
+  </mat-form-field>
+  <button routerLink="/orderdetailsadd" mat-icon-button  mat-mini-fab aria-label="Example icon-button with a heart icon">
+    <mat-icon>add</mat-icon>
+  </button>
+
+<div class="mat-elevation-z8">
+   <table mat-table [dataSource]="dataSource" matSort>
+      <ng-container matColumnDef="delete">
+          <th mat-header-cell *matHeaderCellDef>
+            <button mat-raised-button color="warn">Delete Selected</button>
+          </th>
+          <td mat-cell *matCellDef="let row" >
+            <mat-checkbox></mat-checkbox>
+          </td>
+        </ng-container>
+
+     <ng-container matColumnDef="od_id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Id</th>
+        <td mat-cell *matCellDef="let row"> {{row.od_id}} </td>
+     </ng-container>
+
+     <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+        <td mat-cell *matCellDef="let row"> {{row.price}} </td>
+     </ng-container>
+
+    <ng-container matColumnDef="pro_id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Id </th>
+      <td mat-cell *matCellDef="let row"> {{row.pro_id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="order_id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Order_id </th>
+      <td mat-cell *matCellDef="let row"> {{row.order_id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef > Action </th>
+        <td mat-cell *matCellDef="let row">
+          <button mat-icon-button color="warn" (click)="onDelete(row)" mat-mini-fab aria-label="Example icon-button with a heart icon">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <button mat-icon-button color="primary" (click)="onEdit(row)" mat-mini-fab aria-label="Example icon-button with a heart icon">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button (click)="onViewMore(row)" mat-icon-button color="accent"  mat-mini-fab aria-label="Example icon-button with a heart icon">
+            <mat-icon>more</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+    </tr>
+
+  </table>
+  <mat-paginator [pageSizeOptions]="[1, 3, 5, 25]"></mat-paginator>
+  </div>
+
+
