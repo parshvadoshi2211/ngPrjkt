@@ -13,7 +13,7 @@ import { ProductviewmoreComponent } from './productviewmore/productviewmore.comp
 export class ProductdisplayComponent implements OnInit {
   productarr:Product[]=[];
 
-  displayedColumns:string[]=['delete','pro_name','pro_price','pro_qty','cat_name','Action'];
+  displayedColumns:string[]=['delete','pro_name','pro_color','pro_price','pro_qty','cat_name','Action'];
   dataSource:MatTableDataSource<Product>;
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;

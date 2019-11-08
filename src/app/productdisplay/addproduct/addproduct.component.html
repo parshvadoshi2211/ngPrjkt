@@ -1,0 +1,51 @@
+<form>
+  <mat-form-field>
+    <input matInput placeholder="Product ID" [(ngModel)]="pro_id" name="pro_id">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="ENTER Product Name" [(ngModel)]="pro_name" name="pro_name">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="ENTER Product Color" [(ngModel)]="pro_color" name="pro_color">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="ENTER Product Price" [(ngModel)]="pro_price" name="pro_price">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="ENTER Product Quantity" [(ngModel)]="pro_qty" name="pro_qty">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="ENTER Product Manufacturer" [(ngModel)]="pro_mfg" name="pro_mfg">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="ENTER Product Image" [(ngModel)]="pro_img" name="pro_img">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="ENTER Product Info" [(ngModel)]="pro_info" name="pro_info">
+  </mat-form-field>
+  <br>
+
+  <!-- <select name="fk_cat_id" [(ngModel)]="selected" >
+        <option *ngFor="let item of cat_arr" [value]="item.cat_id"  >
+          {{item.cat_id}}
+        </option>
+      </select>-->
+  <mat-form-field>
+
+    <mat-select [(ngModel)]="selected" name="selected" placeholder="ENTER category TYPE">
+      <mat-option *ngFor="let item of cat_arr" [value]="item.cat_id">
+        {{item.cat_name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+  <!-- <input type="file" name="pro_img" [(ngModel)]="pro_img"> -->
+  <button mat-button color="primary" (click)="onProductAdd()">ADD</button>
+</form>

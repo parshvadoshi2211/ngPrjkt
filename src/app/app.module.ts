@@ -12,13 +12,13 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatInputModule } from '@angular/material/input';
 import { DisplayUserComponent } from './display-user/display-user.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ViewmoreComponent } from './display-user/viewmore/viewmore.component';
 import { ProductdisplayComponent } from './productdisplay/productdisplay.component';
 import { ProductviewmoreComponent } from './productdisplay/productviewmore/productviewmore.component';
 import { CategoryviewmoreComponent } from './categorydisplay/categoryviewmore/categoryviewmore.component';
 import { CategorydisplayComponent } from './categorydisplay/categorydisplay.component';
-import { ProductaddComponent } from './productdisplay/productadd/productadd.component';
+import { AddproductComponent } from './productdisplay/addproduct/addproduct.component';
 import { CartdisplayComponent } from './cartdisplay/cartdisplay.component';
 import { CartaddComponent } from './cartdisplay/cartadd/cartadd.component';
 import { DeliveryboydisplayComponent } from './deliveryboydisplay/deliveryboydisplay.component';
@@ -31,6 +31,7 @@ import { OrderdetailsaddComponent } from './orderdetailsdisplay/orderdetailsadd/
 import { OrderdisplayComponent } from './orderdisplay/orderdisplay.component';
 import { OrderaddComponent } from './orderdisplay/orderadd/orderadd.component';
 import { OrderviewmoreComponent } from './orderdisplay/orderviewmore/orderviewmore.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import { OrderviewmoreComponent } from './orderdisplay/orderviewmore/orderviewmo
     ProductviewmoreComponent,
     CategorydisplayComponent,
     CategoryviewmoreComponent,
-    ProductaddComponent,
+    AddproductComponent,
     CartdisplayComponent,
     CartaddComponent,
     DeliveryboydisplayComponent,
@@ -54,11 +55,14 @@ import { OrderviewmoreComponent } from './orderdisplay/orderviewmore/orderviewmo
     OrderdetailsaddComponent,
     OrderdisplayComponent,
     OrderaddComponent,
-    OrderviewmoreComponent
+    OrderviewmoreComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
     routingArr,
+    MatInputModule,
+    FormsModule,
     MatSelectModule,
     MatDialogModule,
     ReactiveFormsModule,

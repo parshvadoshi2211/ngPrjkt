@@ -2,7 +2,7 @@ import { RouterModule,Routes } from '@angular/router';
 import { DisplayUserComponent } from './display-user/display-user.component';
 import { ProductdisplayComponent } from './productdisplay/productdisplay.component';
 import { CategorydisplayComponent } from './categorydisplay/categorydisplay.component';
-import { ProductaddComponent } from './productdisplay/productadd/productadd.component';
+import { AddproductComponent } from './productdisplay/addproduct/addproduct.component';
 import { CartdisplayComponent } from './cartdisplay/cartdisplay.component';
 import { CartaddComponent } from './cartdisplay/cartadd/cartadd.component';
 import { DeliveryboydisplayComponent } from './deliveryboydisplay/deliveryboydisplay.component';
@@ -13,11 +13,12 @@ import { OrderdetailsdisplayComponent } from './orderdetailsdisplay/orderdetails
 import { OrderdetailsaddComponent } from './orderdetailsdisplay/orderdetailsadd/orderdetailsadd.component';
 import { OrderdisplayComponent } from './orderdisplay/orderdisplay.component';
 import { OrderaddComponent } from './orderdisplay/orderadd/orderadd.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 // import { CategoryaddComponent } from './categorydisplay/categoryadd/categoryadd.component';
 const arr:Routes=[
   {path:'',component:DisplayUserComponent},
   {path:'product',component:ProductdisplayComponent},
-  {path:'productadd' , component:ProductaddComponent},
+  {path:'addproduct' , component:AddproductComponent},
   {path:'category',component:CategorydisplayComponent},
   // {path:'categoryadd',component:CategoryaddComponent},
   {path:'cart',component:CartdisplayComponent},
@@ -29,6 +30,8 @@ const arr:Routes=[
   {path:'order',component:OrderdisplayComponent},
   {path:'orderadd',component:OrderaddComponent},
   {path:'orderdetails',component:OrderdetailsdisplayComponent},
-  {path:'orderdetailsadd',component:OrderdetailsaddComponent}
+  {path:'orderdetailsadd',component:OrderdetailsaddComponent},
+  {path:'pagenotfound',component:PagenotfoundComponent},
+  {path:'**',redirectTo:'/pagenotfound'}
 ];
 export const routingArr=RouterModule.forRoot(arr);
